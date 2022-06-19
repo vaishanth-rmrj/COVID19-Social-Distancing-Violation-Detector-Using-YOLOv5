@@ -23,12 +23,12 @@ YOLOv5 is available in four models, namely s, m, l, and x, each one of them offe
 
 1. Mall scenario
 
-<img src="github_extras/img_1.png" width="500">
-<img src="github_extras/img_2.png" width="500">
+  <img src="github_extras/img_1.png" width="500">
+  <img src="github_extras/img_2.png" width="500">
 
 2. People walking in a busy street
 
-<img src="github_extras/img_3.png" width="500">
+  <img src="github_extras/img_3.png" width="500">
 
 ## INSTRUCTIONs:
 1. git clone git@github.com:vaishanth-rmrj/COVID19-Social-Distancing-Voilation-Detector-Using-YOLOv5.git
