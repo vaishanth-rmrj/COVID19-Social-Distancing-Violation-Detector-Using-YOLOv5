@@ -13,7 +13,7 @@ The YOLOv5 implementation has been done in Pytorch in contrast with the previous
 ## YOLOv5 variants
 YOLOv5 is available in four models, namely s, m, l, and x, each one of them offering different detection accuracy and performance as shown below.
 
-<img src="github_extras/yolo_variant_comparision.png" width="500">
+<img src="github_extras/yolo_variants_comparision.png" width="500">
 
 
 
