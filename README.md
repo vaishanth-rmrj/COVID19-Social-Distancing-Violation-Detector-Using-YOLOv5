@@ -1,4 +1,4 @@
-# COVID19-Social-Distancing-Voilation-Detector-Using-YOLOv5
+# COVID19-Social-Distancing-Violation-Detector-Using-YOLOv5
 
 Python implementation of YOLO v5 to detect if people are maintaining social distancing in public places.
 
