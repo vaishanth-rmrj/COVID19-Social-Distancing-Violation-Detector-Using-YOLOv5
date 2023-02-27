@@ -132,7 +132,7 @@ def main(args):
 
     people_detector = PeopleDetector(args.yolo_model)
     capture = cv2.VideoCapture(args.source)
-    # store_output = list()
+    store_output = list()
 
     if not capture.isOpened():
         print("Error opening the video file !")
@@ -148,8 +148,8 @@ def main(args):
 
         cv2.imshow("Output", output_frame)
 
-        # if args.save_result:
-        #     store_output.append(output_frame)       
+        if args.save_result:
+            store_output.append(output_frame)       
 
         if cv2.waitKey(24) == ord('q'):
             break
@@ -157,21 +157,21 @@ def main(args):
             continue
     
     # Save results (image with detections)
-    # if args.save_result:
-    #     if capture:  # video
-    #         fps = capture.get(cv2.CAP_PROP_FPS)
-    #         w = int(capture.get(cv2.CAP_PROP_FRAME_WIDTH))
-    #         h = int(capture.get(cv2.CAP_PROP_FRAME_HEIGHT))
-    #     else:  # stream
-    #         fps, w, h = 30, output_frame.shape[1], output_frame.shape[0]
+    if args.save_result:
+        if capture:  # video
+            fps = capture.get(cv2.CAP_PROP_FPS)
+            w = int(capture.get(cv2.CAP_PROP_FRAME_WIDTH))
+            h = int(capture.get(cv2.CAP_PROP_FRAME_HEIGHT))
+        else:  # stream
+            fps, w, h = 30, output_frame.shape[1], output_frame.shape[0]
 
-    #     save_path = "results/output_vid.mp4"
-    #     vid_writer = cv2.VideoWriter(save_path, cv2.VideoWriter_fourcc(*'mp4v'), fps, (w, h))
+        save_path = "results/output_vid.mp4"
+        vid_writer = cv2.VideoWriter(save_path, cv2.VideoWriter_fourcc(*'mp4v'), fps, (w, h))
 
-    #     for frame in store_output:
-    #         vid_writer.write(frame)
+        for frame in store_output:
+            vid_writer.write(frame)
             
-    #     vid_writer.release()
+        vid_writer.release()
     capture.release()
     cv2.destroyAllWindows()
 
